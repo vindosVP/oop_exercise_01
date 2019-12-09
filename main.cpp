@@ -11,16 +11,13 @@ int main() {
     b.Read(std::cin);
 
     std::cout << "Addition:" << std::endl;
-    c = a.Add(b);
-    c.Print(std::cout);
+    a.Add(b).Print(std::cout);
 
     std::cout << "Subtraction:" << std::endl;
-    c = a.Subtract(b);
-    c.Print(std::cout);
+    a.Subtract(b).Print(std::cout);
 
     std::cout << "Multiplication:" << std::endl;
-    c = a.Multiply(b);
-    c.Print(std::cout);
+    a.Multiply(b).Print(std::cout);
 
     if(a.IsEqual(b)) {
         std::cout << "Numbers are equal" << std::endl;
@@ -36,9 +33,8 @@ int main() {
 
 
     std::cout << "Division:" << std::endl;
-    c = a.Divide(b);
-    if(c.GetMod()) {
-        c.Print(std::cout);        
+    if(a.Divide(b).GetMod()) {
+        a.Divide(b).Print(std::cout);        
     }
 
 
